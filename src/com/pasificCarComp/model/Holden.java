@@ -1,8 +1,8 @@
 package com.pasificCarComp.model;
 
 public class Holden extends  Car{
-    public Holden(int cylinders, String name) {
-        super(cylinders, name);
+    public Holden(int cylinders,String name) {
+        super( cylinders,name);
     }
     @Override
     public String startEngine() {

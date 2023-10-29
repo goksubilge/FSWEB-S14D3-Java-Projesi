@@ -11,7 +11,7 @@ public class Car {
 
     private int wheels ;
 
-    public Car(int cylinders, String name) {
+    public Car(int cylinders,String name) {
         this.cylinders = cylinders;
         this.name = name;
         this.engine = true;
@@ -37,8 +37,10 @@ public class Car {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        // Car car = (Car) o;
-        // return cylinders == car.cylinders && Objects.equals(name, car.name);
+        /**
+          Carcar = (Car) o;
+         return cylinders == car.cylinders && Objects.equals(name, car.name);
+         */
         return ((Car) o).name.equals(name) && ((Car) o).cylinders == cylinders;
     }
     public String startEngine() {
