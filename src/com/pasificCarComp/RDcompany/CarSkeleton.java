@@ -32,15 +32,16 @@ public String  drive(){
 protected void runEngine(CarSkeleton carSkeleton){
 if(carSkeleton instanceof GasPoweredCar) {
     double avgKmPerLitre = ((GasPoweredCar)carSkeleton).getAvgKmPerLitre();
-    System.out.println("The car with GAS");
+    System.out.println("The car with GAS." + " KM per Lt: " + avgKmPerLitre);
 } else if (carSkeleton instanceof HybridCar) {
     int battSize = ((HybridCar)carSkeleton).getBatterySize();
     double avgKmPerLitre = ((HybridCar) carSkeleton).getAvgKmPerLitre(); // carSkeleton.get yazdığında seçeneklerim geliyor zaten !! CAsting 'i otomatik yapabiliyor bu.
-    System.out.println("The car with ELECTRIC  & GAS" + " Battery: " + battSize + " KM per Lt: " + avgKmPerLitre);
+    startEngine();
+    System.out.println("The car with ELECTRIC  & GAS." + " Battery: " + battSize + " KM per Lt: " + avgKmPerLitre);
 } else if (carSkeleton instanceof  ElectricCar) {
     double avgKmPerCharge = ((ElectricCar) carSkeleton).getAvgKmPerCharge();
     int batterySize = ((ElectricCar) carSkeleton).getBatterySize();
-    System.out.println("The car with ELECTRIC" + " Battery: " + batterySize + " KM per Charge: " + avgKmPerCharge);
+    System.out.println("The car with ELECTRIC." + " Battery: " + batterySize + " KM per Charge: " + avgKmPerCharge);
 } else {
     System.out.println("CAR TYPE IS NOT VALID");
 }
